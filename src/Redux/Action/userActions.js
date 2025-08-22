@@ -11,8 +11,9 @@ import {
 } from "../constants/userConstants";
 import { toast } from "react-toastify";
 
-//login
-export const login = (email, password) => async (dispatch) => {
+ 
+ //login
+export const login = (name, password) => async (dispatch) => {
   const Toastobjects = {
     pauseOnFocusLoss: false,
     draggable: false,
@@ -22,15 +23,17 @@ export const login = (email, password) => async (dispatch) => {
 
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
+
     const config = {
-      Headers: {
+      headers: { // 👈 petit bug, tu avais écrit "Headers"
         "Content-Type": "application/json",
       },
     };
 
+    // 👉 envoyer { name, password } au backend
     const { data } = await axios.post(
       `https://backenmd.onrender.com/api/users/login`,
-      { email, password },
+      { name, password },
       config
     );
 
@@ -58,6 +61,7 @@ export const login = (email, password) => async (dispatch) => {
     });
   }
 };
+
 
 //logout
 
