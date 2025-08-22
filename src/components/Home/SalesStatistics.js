@@ -6,7 +6,8 @@ const SaleStatistics = () => {
       <div className="card mb-4 shadow-sm">
         <article className="card-body">
           <h5 className="card-title"> Vente par mois</h5>
- 
+
+       
 
           <iframe
             title="Content Frame 56"
@@ -18,7 +19,7 @@ const SaleStatistics = () => {
                width: "100%",
               height: "350px",
             }}
-            src="https://charts.mongodb.com/charts-dbmudulix-pzodzxc/embed/charts?id=ece1e703-c8d4-4564-bb47-6e8d4c20b940&maxDataAge=14400&theme=light&autoRefresh=true"
+            src="https://charts.mongodb.com/charts-dbmudulix-pzodzxc/embed/charts?id=0a417817-1634-4b75-9830-12e9f758ca89&maxDataAge=14400&theme=light&autoRefresh=true"
           ></iframe>
 
           {/* rapport */}
